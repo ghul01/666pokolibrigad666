@@ -9,12 +9,16 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
+import { GuildFestComponent } from './guild-fest/guild-fest.component';
+import { DragonArenaComponent } from './dragon-arena/dragon-arena.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
     HomeComponent,
+    GuildFestComponent,
+    DragonArenaComponent,
     CounterComponent,
     FetchDataComponent
   ],
@@ -24,6 +28,8 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: 'guild-fest', component: GuildFestComponent },
+      { path: 'dragon-arena', component: DragonArenaComponent },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
     ])
